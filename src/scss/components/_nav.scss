@@ -1,0 +1,63 @@
+.nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 30rem;
+  padding-block: 5rem;
+  background: var(--light-color);
+  transition: .4s ease-in-out;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__link {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  &.menu--active {
+    right: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  @include for-desktop {
+    position: relative;
+    padding: 0;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+
+    &__list {
+      flex-direction: row;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5vw;
+    }
+    &__link {
+      display: flex;
+      padding-block: .5rem;
+      font-family: var(--font-family-work);
+      font-weight: 400;
+      font-size: 1.9rem;
+      line-height: 1;
+      text-transform: capitalize;
+      color: var(--light-color);
+    }
+  }
+}
+
+.burger {
+  @include burger;
+  margin-left: auto;
+
+  @include for-desktop {
+    display: none;
+  }
+}

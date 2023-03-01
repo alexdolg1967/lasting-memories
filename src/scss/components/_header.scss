@@ -1,0 +1,31 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--light-color);
+  z-index: 20;
+  &__container {
+  }
+  &__body {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+
+    @include for-desktop {
+      padding: calc(var(--index) * 2) 0;
+    }
+  }
+  & .nav__link:hover,
+  & .nav__item.active .nav__link {
+    color: var(--text-color);
+  }
+  & .menu--active .nav__link:hover,
+  & .menu--active .nav__item.active .nav__link {
+    color: var(--accent-color);
+  }
+
+}

@@ -1,0 +1,33 @@
+// === footer ===
+.footer {
+  background-color: var(--text-color);
+  // .footer__container
+  &__container {
+  }
+  &__body {
+    padding: 1.9rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    color: var(--light-color);
+  }
+  & .logo {
+    letter-spacing: 0.05em;
+  }
+  & a {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    color: var(--light-color);
+
+    @include hover {
+      color: var(--hover-color);
+    }
+
+  }
+}
+
+
+

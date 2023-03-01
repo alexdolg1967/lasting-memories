@@ -1,0 +1,16 @@
+:root {
+  // base
+  --index: calc(1vw + 1vh);
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-family-work: "WorkSans", sans-serif;
+
+  // colors
+  --accent-color: #00A759;
+  --light-color: #ffffff;
+  --text-color: #20201F;
+  --title-light-color: #E5E2DE;
+}
+$widthContent: 1530;
+$offsetContainer: 15;
+$maxWidthContainer: $widthContent + ($offsetContainer * 2);
+$gap: 10px;

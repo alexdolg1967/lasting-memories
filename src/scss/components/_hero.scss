@@ -1,0 +1,24 @@
+.hero {
+  width: 100%;
+  aspect-ratio: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/hero-bg.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    margin-top: calc(var(--index) * (-4.5));
+    display: flex;
+    align-items: center;
+    column-gap: 7vw;
+    font-family: var(--font-family-roboto);
+    font-weight: 400;
+    font-size: clamp(32px, calc(var(--index) * 2.5), 68px);
+    line-height: 1;
+    text-transform: lowercase;
+    color: #FFFFFF;
+  }
+}
+
