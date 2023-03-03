@@ -40,8 +40,7 @@ html {
   min-height: 100%;
   font-size: 1.6rem;
   line-height: 1.45;
-  color: #ffffff;
-  background: var(--hero-bg);
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
@@ -49,9 +48,12 @@ h1, h2, h3 {
   font-family: var(--font-family-work);
 }
 
-img {
-  height: auto;
+img,
+picture {
+  display: block;
+  width: 100%;
   max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -151,52 +153,41 @@ textarea:required:valid {
 .section {
   position: relative;
   flex: auto;
-  padding-top: 12.3rem;
-  padding-bottom: 6rem;
-
-  &-top {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 35px;
-  }
+  padding-block: 3.5rem;
 
   &__title {
     margin: 0;
-    max-width: 580px;
-    font-weight: 800;
-    font-size: 3.5rem;
-    line-height: 1.32;
-    text-transform: uppercase;
-    color: var(--light-color);
-    text-align: center;
+    font-family: var(--font-family-roboto);
+    font-weight: 400;
+    font-size: clamp(32px, calc(var(--index) * 2.5), 68px);
+    line-height: 1;
+    text-transform: lowercase;
   }
 
 }
 
 .btn {
+  min-width: 15.5rem;
   padding: 1.8rem 5rem;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--light-color);
+  color: var(--text-color);
   background: var(--btn-bg);
-  border-radius: 3rem;
+  border: 1px solid var(--text-color);
+  border-radius: 5rem;
   transition: 0.3s;
 
   &:hover {
-    background: var(--btn-hover-bg);
+    color: var(--light-color);
+    background: var(--text-color);
   }
   &:active,
   &.active {
-    background: var(--btn-active-bg);
+    color: var(--light-color);
+    background: var(--text-color);
   }
 }

@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
 
-@include('partials/head.html', {"title": "Flower Fracht Karaganda"})
+@include('partials/head.html', {"title": "Lasting memories"})
 
 <body class="page__body">
   <div class="wrapper">
     @include('partials/header.html')
     <main class="main">
       @include('partials/hero.html')
+      @include('partials/making.html')
+      @include('partials/collections.html')
     </main>
     @include('partials/footer.html')
   </div>
+  @include('partials/scroll-up.html')
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
