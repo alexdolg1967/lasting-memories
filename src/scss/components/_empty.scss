@@ -2,8 +2,13 @@
   padding-block: 0;
 
   &__container {
+    padding-left: 0;
     padding-right: 0;
     margin-right: 0;
+
+    @include for-tablet {
+      padding-left: 15px;
+    }
   }
 
   &__inner {
@@ -15,7 +20,11 @@
     flex: auto;
   }
   &__right {
-    flex: 0 1 480px;
+    flex: auto;
+
+    @include for-tablet {
+      flex: 0 1 480px;
+    }
 
   }
 }

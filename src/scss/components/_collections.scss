@@ -1,7 +1,12 @@
 .collections {
-  padding-top: 10rem;
-  padding-left: 6vw;
+  padding-top: 5rem;
+  padding-left: 2vw;
   background-color: var(--title-light-color);
+
+  @include for-tablet {
+    padding-top: 10rem;
+    padding-left: 6vw;
+  }
 
   &__container {
     padding-right: 0;
@@ -25,7 +30,15 @@
     width: 100%;
 
     &__wrapper{
-      height: 80rem;
+      height: 66vw;
+
+      @include for-small {
+        height: 38vw;
+      }
+
+      @include for-tablet {
+        height: 52vw;
+      }
     }
 
     & .swiper-button-next:after, .swiper-button-prev:after {
@@ -66,10 +79,29 @@
     &__wrapper {
       position: relative;
       display: flex;
-      column-gap: 7rem;
+      column-gap: 3vw;
+
+      @include for-tablet {
+        column-gap: 7rem;
+      }
     }
     &__left {
-      padding-top: 21rem;
+      padding-right: 4vw;
+
+      @include for-small {
+        padding-right: 0;
+      }
+      @include for-tablet {
+        padding-top: 21rem;
+      }
+    }
+
+    &__right {
+      display: none;
+
+      @include for-small {
+        display: block;
+      }
     }
 
     & .caption,
@@ -112,12 +144,18 @@
 
 .thimb {
   &-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50vw;
-    margin-left: 0 !important;
-    z-index: 3;
+    position: relative;
+    margin-bottom: 3rem;
+
+    @include for-tablet {
+      position: absolute;
+      margin-bottom: 0;
+      top: 0;
+      left: 0;
+      width: 50vw;
+      margin-left: 0 !important;
+      z-index: 3;
+    }
 
     &__wrapper {
       padding-top: 3rem;

@@ -694,27 +694,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Функция, которая добавляет класс для плавного появления шапки
   function addScrollUpClass() {
-    if (window.scrollY >= heroHeight) {
-      header.classList.add("header--fixed");
-    } else {
-      header.classList.remove("header--fixed");
+    if (window.innerWidth > 1024) {
+      if (window.scrollY >= heroHeight) {
+        header.classList.add("header--fixed");
+      } else {
+        header.classList.remove("header--fixed");
+      }
     }
   }
 
   // Отслеживаем прокрутку страницы и вызываем функцию добавления класса
   window.addEventListener("scroll", addScrollUpClass);
-  const sections = document.querySelectorAll('.section');
-  const navLinks = document.querySelectorAll('.header .nav__link');
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll(".header .nav__link");
   window.onscroll = () => {
     sections.forEach(sec => {
       let top = window.scrollY;
       let offset = sec.offsetTop - headerHeight;
       let height = sec.offsetHeight;
-      let id = sec.getAttribute('id');
+      let id = sec.getAttribute("id");
       if (top >= offset && top < offset + height) {
         navLinks.forEach(links => {
-          links.classList.remove('active');
-          document.querySelector('.header .nav__list a[href*=' + id + ']')?.classList.add('active');
+          links.classList.remove("active");
+          document.querySelector(".header .nav__list a[href*=" + id + "]")?.classList.add("active");
         });
       }
     });
