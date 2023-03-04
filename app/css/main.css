@@ -42,7 +42,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 4rem;
 }
 
 *,
@@ -470,6 +470,25 @@ textarea:required:valid {
 .header .menu--active .nav__link:hover, .header .menu--active .nav__item.active .nav__link {
   color: var(--accent-color);
 }
+.header.header--fixed {
+  position: fixed;
+  top: 0;
+  background-color: var(--light-color);
+  -webkit-box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.header.header--fixed .header__body {
+  padding: 1rem 0;
+}
+.header.header--fixed .nav__link {
+  color: var(--text-color);
+}
+.header.header--fixed .nav__link:hover, .header.header--fixed .nav__link.active {
+  color: var(--accent-color);
+}
 
 .hero {
   width: 100%;
@@ -677,6 +696,7 @@ textarea:required:valid {
 }
 .collections__container {
   padding-right: 0;
+  margin-right: 0;
 }
 .collections__inner {
   position: relative;
@@ -695,7 +715,7 @@ textarea:required:valid {
   width: 100%;
 }
 .collections-slider__wrapper {
-  height: 65rem;
+  height: 70rem;
 }
 .collections-slider .swiper-button-next:after, .collections-slider .swiper-button-prev:after {
   display: none;

@@ -28,4 +28,25 @@
     color: var(--accent-color);
   }
 
+  &.header--fixed {
+    position: fixed;
+    top: 0;
+    background-color: var(--light-color);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.7);
+    transition: 0.5s;
+
+    & .header__body {
+      padding: 1rem 0;
+    }
+
+    & .nav__link {
+      color: var(--text-color);
+
+      &:hover,
+      &.active {
+        color: var(--accent-color);
+      }
+
+    }
+  }
 }

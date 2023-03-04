@@ -44,6 +44,40 @@ if (isMobile.any()) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // появление header после прохождения первого блока при скроле
+  const header = document.querySelector(".header");
+  const hero = document.querySelector(".hero");
+  const headerHeight = header.offsetHeight;
+  const heroHeight = hero.offsetHeight;
 
+  // Функция, которая добавляет класс для плавного появления шапки
+  function addScrollUpClass() {
+    if (window.scrollY >= heroHeight) {
+      header.classList.add("header--fixed");
+    } else {
+      header.classList.remove("header--fixed");
+    }
+  }
 
+  // Отслеживаем прокрутку страницы и вызываем функцию добавления класса
+  window.addEventListener("scroll", addScrollUpClass);
+
+  const sections =document.querySelectorAll('.section');
+  const navLinks =document.querySelectorAll('.header .nav__link');
+
+  window.onscroll = () => {
+    sections.forEach(sec => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - headerHeight;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach(links => {
+          links.classList.remove('active');
+          document.querySelector('.header .nav__list a[href*=' + id + ']')?.classList.add('active');
+        })
+      }
+    })
+  }
 });
