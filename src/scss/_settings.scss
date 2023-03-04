@@ -159,7 +159,7 @@ textarea:required:valid {
     margin: 0;
     font-family: var(--font-family-roboto);
     font-weight: 400;
-    font-size: clamp(32px, calc(var(--index) * 2.5), 68px);
+    font-size: clamp(32px, calc(var(--index) * 4), 68px);
     line-height: 1;
     text-transform: lowercase;
   }
