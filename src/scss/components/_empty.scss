@@ -1,0 +1,21 @@
+.empty {
+  padding-block: 0;
+
+  &__container {
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    flex: auto;
+  }
+  &__right {
+    flex: 0 1 480px;
+
+  }
+}

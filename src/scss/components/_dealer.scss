@@ -1,0 +1,39 @@
+.dealer {
+  padding-block: 0;
+  background-color: var(--title-light-color);
+
+  &__container {
+    padding-left: 0;
+    margin-left: 0;
+    max-width: initial;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 8.4rem;
+  }
+  &__left {
+    flex: 0 0 50%;
+  }
+  &__right {
+    padding-right: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & .section__title {
+      margin-bottom: 6rem;
+    }
+
+    & p {
+      font-weight: 400;
+      font-size: 1.9rem;
+      line-height: 3.3rem;
+    }
+
+    & .btn {
+      margin-top: 5rem;
+    }
+  }
+}
